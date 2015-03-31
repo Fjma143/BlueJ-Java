@@ -7,7 +7,8 @@
 import java.util.Scanner;
 public class Taller7
 {
-    public void factorial(int n){    // Punto 1   
+    // Punto 1.  
+    public void factorial(int n){     
         int f = 1;
         int i=0;
         while(n != 0){
@@ -23,11 +24,14 @@ public class Taller7
         System.out.println(base+" elevado a la "+n+" es "+r+".");
     }
     
-    public double sen(double x, int n){
-        double acum=0;
-        for (int i=0;i<n;i++){
-            acum += Math.pow(x,2*i+1)*(Math.pow(-1,1))/ factorial(2*i+1);
-        }
-        return acum;
-    }
+    // public double sen(double x, int n){     --- TODAVÍA ERRORES ---
+    //    double acum=0;
+    //    for (int i=0;i<n;i++){
+    //        acum += Math.pow(x,2*i+1)*Math.pow(-i,1)/(factorial(2*i+1));
+    //    }
+    //    return acum;
+    //}
+    
+    // Punto 2.
+    
 }
