@@ -1,3 +1,3 @@
 #Bluej Java
 
-En este repositorio se suben trabajos de java trabajados en la Universidad EAFIT. 
+En este repositorio se suben trabajos de JAVA trabajados en la Universidad EAFIT. 
