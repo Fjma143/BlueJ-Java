@@ -41,5 +41,30 @@ public class Taller7
             }
         }
         return cadenaSinEspacios;
-    }    
+    }
+    
+    //Punto 4.
+    // Método para llamar a las Mayusculas.
+    public int Mayusculas(String texto){
+        int num=0;
+        for (int i=0;i<texto.length();i++){
+            //Se usan los caracteres ASCII imprimibles 65 = A hasta 90 = Z.
+            if (texto.charAt(i)>=66 && texto.charAt(i)<=90){
+                num++;
+            }
+        }
+        return num;
+    }
+    // Método para llamar a las Minusculas.
+    public int Minusculas(String texto){
+        int num=0;
+        for (int i=0;i<texto.length();i++){
+            //Se usan los caracteres ASCII imprimibles 95 = a hasta 122 = z.
+            if (texto.charAt(i)>=95 && texto.charAt(i)<=122){
+                num++;
+            }
+        }
+        return num;
+    }
+    public void llamandoMayMin()
 }
