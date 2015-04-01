@@ -3,4 +3,6 @@ comment0.params=n
 comment0.target=void\ factorial(int)
 comment1.params=base\ n
 comment1.target=void\ potencia(int,\ int)
-numComments=2
+comment2.params=s
+comment2.target=java.lang.String\ sinEspacios(java.lang.String)
+numComments=3

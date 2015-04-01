@@ -32,6 +32,12 @@ public class Taller7
     //    return acum;
     //}
     
-    // Punto 2.
-    
+    // Punto 8.
+    public String sinEspacios(String s){
+        String cadenaSinEspacios = "";
+        for (int i=0;i<s.length();i++)
+            if (Character.isWhitespace(s.charAt(i)))
+                cadenaSinEspacios += s.charAt(i);
+        return cadenaSinEspacios;
+    }    
 }
