@@ -66,5 +66,15 @@ public class Taller7
         }
         return num;
     }
-    public void llamandoMayMin()
+    public void llamandoMayMin(){
+        Scanner sc = new Scanner(System.in);
+        String texto;
+        System.out.print("Ingrese una texto: ");
+        texto = sc.nextLine();
+        
+        // Mensaje para mostrar el resultado.
+        System.out.println("El número de mayusculas del texto es: "+Mayusculas(texto));
+        System.out.println("El número de minusculas del texto es: "+Minusculas(texto));
+        
+    }
 }
