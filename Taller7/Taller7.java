@@ -99,4 +99,45 @@ public class Taller7
         letra = x.next().charAt(0);
         System.out.println("El número de veces que se repite la "+letra+" es "+numLetra(texto,letra));
     }
+    
+    //Punto 6.
+    //Método para detectar si el texto es palindrome.
+    public boolean palindrome(String p){
+        for (int i=0,j=p.length()-1;i<p.length()/2;i++,j--){
+            if (p.charAt(i) != p.charAt(j)){
+                return false;
+            }
+        }
+         return true;   
+    }
+    public void textoPalindrome(){
+        Scanner sc = new Scanner(System.in);
+        String texto;
+        System.out.println("Ingrese una oración: ");
+        texto = sc.nextLine();
+        if (palindrome(texto)){
+            System.out.println("La oración es palindrome.");
+        }else {
+            System.out.println("La oración no es palindrome.");
+        }
+    }
+    
+    //Punto 7.
+    //Método para reemplazar una letra de minuscula a mayuscula. 
+    public String colocarMayusculas(String t,char min, char may){
+        return t.replace(min,may);
+    }
+    public void replaceVariable(){
+        Scanner fg = new Scanner(System.in);
+        String texto;
+        char letra;
+        System.out.println("Ingrese un texto: ");
+        texto = fg.nextLine();
+        do {
+            System.out.println("Ingrese una letra: ");
+            letra = fg.next().charAt(0);
+        }while(!Character.isLetter(letra));
+        texto = colocarMayusculas(texto, Character.toLowerCase(letra),Character.toUpperCase(letra));
+        System.out.println("El texto modificado es: "+texto);
+    }
 }
