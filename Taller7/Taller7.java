@@ -77,4 +77,26 @@ public class Taller7
         System.out.println("El número de minusculas del texto es: "+Minusculas(texto));
         
     }
+    
+    //Punto 5.
+    //Método para encontrar el numero de veces que se encuentra un caracter en un texto.
+    public int numLetra(String cadena, char letra){
+        int v = 0;
+        int s = -1;
+        while ((s=cadena.indexOf(letra,s+1))>-1){
+            v++;
+        }
+        return v;
+    } 
+    
+    public void repeticionesLetra(){
+        Scanner x= new Scanner(System.in);
+        String texto;
+        char letra;
+        System.out.println("Ingrese un texto: ");
+        texto = x.nextLine();
+        System.out.println("Ingrese una letra: ");
+        letra = x.next().charAt(0);
+        System.out.println("El número de veces que se repite la "+letra+" es "+numLetra(texto,letra));
+    }
 }
