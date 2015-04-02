@@ -33,14 +33,24 @@ public class Taller7
     //}
     
     // Punto 8.
-    public String sinEspacios(String s){
-        String cadenaSinEspacios = "";
-        for (int i=0;i<s.length();i++){
-            if (Character.isWhitespace(s.charAt(i))){
-                cadenaSinEspacios += s.charAt(i);
+    //Método para quitar los espacios de un texto.
+    public String sinEspacios(String e){
+        String esp="";
+        char letra;
+        for (int i=0;i<e.length();i++){
+            letra=e.charAt(i);
+            if(!Character.isWhitespace(letra)){
+                esp=esp+letra;
             }
         }
-        return cadenaSinEspacios;
+        return esp;
+    }
+    public void textoSinEspacios(){
+        Scanner hj = new Scanner(System.in);
+        String texto;
+        System.out.println("Ingrese un texto: ");
+        texto = sinEspacios(hj.nextLine());
+        System.out.println("La cadena sin espacios es: "+texto);
     }
     
     //Punto 4.
@@ -140,4 +150,6 @@ public class Taller7
         texto = colocarMayusculas(texto, Character.toLowerCase(letra),Character.toUpperCase(letra));
         System.out.println("El texto modificado es: "+texto);
     }
+    
+    
 }
