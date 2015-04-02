@@ -5,6 +5,7 @@
  * 
  */
 import java.util.Scanner;
+import java.util.StringTokenizer;
 public class Taller7
 {
     // Punto 1.  
@@ -151,5 +152,34 @@ public class Taller7
         System.out.println("El texto modificado es: "+texto);
     }
     
+    //Punto 9.
+    public void numPalabras(){
+        Scanner kl= new Scanner(System.in);
+        String texto;
+        System.out.println("Introduce un texto: ");
+        texto = kl.nextLine();
+        StringTokenizer st = new StringTokenizer(texto);
+        if(st.countTokens()==1){
+             System.out.println("En el texto hay una palabra.");
+        }else {
+            System.out.println("En el texto hay "+st.countTokens()+" palabras.");
+        } 
+    }
     
+    //Punto 10. Sin terminar.
+    public void numTelefono(){
+        Scanner yu = new Scanner(System.in);
+        String tel;
+        System.out.println("Ingresa un número de telefono de 10 dígitos: ");
+        tel = yu.nextLine();
+        //if (isNumeric(tel)== false){
+        //    System.out.println("Lo que has digitado no es un número de telefono.");
+        //}else{
+        //    if (!tel.length()==9){
+        //        System.out.println("El número que has digitado no tiene 10 digitos.");
+        //    }else{
+        //        System.out.println("("+tel.substring(0,3)+")-"+tel.substring(3,4)+"-"+tel.substring(4,10));
+        //    }    
+        //}
+    }
 }
