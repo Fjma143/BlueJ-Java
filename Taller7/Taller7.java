@@ -166,20 +166,20 @@ public class Taller7
         } 
     }
     
-    //Punto 10. Sin terminar.
+    //Punto 10.
+    public boolean isNumeric(String s){
+        return s.matches("[-+]?\\d*\\.?\\d+");
+    }
     public void numTelefono(){
         Scanner yu = new Scanner(System.in);
         String tel;
-        System.out.println("Ingresa un número de telefono de 10 dígitos: ");
+        System.out.println("Ingresa un número de telefono de 10 dígitos [Sin Espacios ni Guiones]: ");
         tel = yu.nextLine();
-        //if (isNumeric(tel)== false){
-        //    System.out.println("Lo que has digitado no es un número de telefono.");
-        //}else{
-        //    if (!tel.length()==9){
-        //        System.out.println("El número que has digitado no tiene 10 digitos.");
-        //    }else{
-        //        System.out.println("("+tel.substring(0,3)+")-"+tel.substring(3,4)+"-"+tel.substring(4,10));
-        //    }    
-        //}
+        if (!isNumeric(tel)){
+            System.out.println("Este no es un numero de telefono.");
+        }else{
+            System.out.println("("+tel.substring(0,2)+")-"+tel.substring(2,3)+"-"+tel.substring(3,10));
+        }
+                   
     }
 }
