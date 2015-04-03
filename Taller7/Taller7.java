@@ -176,10 +176,12 @@ public class Taller7
         System.out.println("Ingresa un número de telefono de 10 dígitos [Sin Espacios ni Guiones]: ");
         tel = yu.nextLine();
         if (!isNumeric(tel)){
-            System.out.println("Este no es un numero de telefono.");
+            System.out.println("Esto no es un numero de telefono.");
         }else{
-            System.out.println("("+tel.substring(0,2)+")-"+tel.substring(2,3)+"-"+tel.substring(3,10));
-        }
-                   
+            if (tel.length() > 9 || tel.length() < 9)
+                System.out.println("No es un número de 10 digitos.");
+            else 
+                System.out.println("("+tel.substring(0,2)+")-"+tel.substring(2,3)+"-"+tel.substring(3,10));
+        }         
     }
 }
