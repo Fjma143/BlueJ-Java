@@ -184,4 +184,39 @@ public class Taller7
                 System.out.println("("+tel.substring(0,2)+")-"+tel.substring(2,3)+"-"+tel.substring(3,10));
         }         
     }
+    
+    //Punto 3.
+    public void a(){
+        int b = 3;
+        c(b);
+        System.out.println(b);
+    }
+    public void c(int b){
+        b=5;
+    }
+    
+    //Punto 2.
+    public void intercambiar(int n){
+        int[] arr= new int[n];
+        int x,b,j;
+        int t=n;
+        for(int c=0;c<n;c++){
+            x=(int)(Math.random()*100)+1;
+            arr[c]=x;
+        }
+        n=n-1;
+        for(int i=1;i<=n;i++){
+            for(j=0;j<=n-1;j++){
+                if(arr[j]>arr[j+1]){
+                   b=arr[j];
+                   arr[j]=arr[j+1];
+                   arr[j+1]=b;
+                }
+            }
+            System.out.println (arr[t-i]);
+            if (i==n){
+                System.out.println (arr[0]);
+            }
+        }
+    }
 }
