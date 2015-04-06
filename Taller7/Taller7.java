@@ -46,11 +46,8 @@ public class Taller7
         }
         return esp;
     }
-    public void textoSinEspacios(){
-        Scanner hj = new Scanner(System.in);
-        String texto;
-        System.out.println("Ingrese un texto: ");
-        texto = sinEspacios(hj.nextLine());
+    public void textoSinEspacios(String texto){
+        texto = sinEspacios(texto);
         System.out.println("La cadena sin espacios es: "+texto);
     }
     
