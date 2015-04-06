@@ -189,17 +189,9 @@ public class Taller7
     }
     
     //Punto 11.
-    public boolean vocales(String s){
-        return s.matches("[a]?.[e]?.[i]?.[o]?.[u]?.[A]?.[E]?.[I]?.[O]?.[U]?");
-    }
-    public void numPalabrasConVocales(){
-        Scanner kl= new Scanner(System.in);
-        String texto;
-        System.out.println("Introduce un texto que tenga vocales [No se pueden repetir las vocales]: ");
-        texto = kl.nextLine();
+    public void numPalabrasConVocales(String texto){
         StringTokenizer st = new StringTokenizer(texto);
         int cont=0;
-        
         for(int x=0;x<texto.length();x++) {
           if ((texto.charAt(x)=='a') || (texto.charAt(x)=='e') || (texto.charAt(x)=='i') || (texto.charAt(x)=='o') || (texto.charAt(x)=='u')){
             cont++;
