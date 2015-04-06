@@ -9,7 +9,7 @@ import java.util.StringTokenizer;
 public class Taller7
 {
     // Punto 1.  
-    public void factorial(int n){     
+    public int factorial(int n){     
         int f = 1;
         int i=0;
         while(n != 0){
@@ -17,21 +17,21 @@ public class Taller7
             n--;
             i++;
         }
-        System.out.println("El factorial de "+i+" es "+f);
+        return f;
     }
     
-    public void potencia(int base, int n){
+    public double potencia(int base, int n){
        int r = (int) Math.pow(base,n);
-        System.out.println(base+" elevado a la "+n+" es "+r+".");
+        return r;
     }
     
-    // public double sen(double x, int n){     --- TODAVÍA ERRORES ---
-    //    double acum=0;
-    //    for (int i=0;i<n;i++){
-    //        acum += Math.pow(x,2*i+1)*Math.pow(-i,1)/(factorial(2*i+1));
-    //    }
-    //    return acum;
-    //}
+    public double sen(int x, int n){ 
+        double acum=0;
+        for (int i=0;i<n;i++){
+            acum += potencia(x,2*i+1)*potencia(-i,1)/(factorial(2*i+1));
+        }
+        return acum;
+    }
     
     // Punto 8.
     //Método para quitar los espacios de un texto.
